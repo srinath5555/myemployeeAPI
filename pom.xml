@@ -84,11 +84,7 @@
 			<version>1.13.6</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
-		<dependency>
-			<groupId>com.mycompany</groupId>
-			<artifactId>ojdbc8-21.6.0.0.1</artifactId>
-			<version>0.1</version>
-		</dependency>
+		
 	</dependencies>
 
 	<repositories>
