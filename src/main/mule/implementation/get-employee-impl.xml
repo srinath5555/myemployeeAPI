@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="get-employee-implFlow" doc:id="341ba8cd-8717-43cf-b943-53346cba8110" >
+		<logger level="INFO" doc:name="Entry Logger" doc:id="44495855-f20c-4e4f-beac-1757edcf000c" message="==== get employee flow started ==="/>
+		<ee:transform doc:name="Response" doc:id="57de1fb3-a561-4a0c-89f9-befc19b41643" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+[
+				{
+					"empid": 101,
+					"empfirstname": "smith",
+					"emplastname": "jhon",
+					"job": "HR",
+					"sal": 75000,
+					"phno": 123579
+				},
+				{
+					"empid": 101,
+					"empfirstname": "smith",
+					"emplastname": "jhon",
+					"job": "HR",
+					"sal": 55000,
+					"phno": 123579
+				},
+				{
+					"empid": 101,
+					"empfirstname": "smith",
+					"emplastname": "jhon",
+					"job": "HR",
+					"sal": 250300,
+					"phno": 123579
+				},
+				{
+					"empid": 101,
+					"empfirstname": "smith",
+					"emplastname": "jhon",
+					"job": "HR",
+					"sal": 35000,
+					"phno": 123579
+				},
+				{
+					"empid": 101,
+					"empfirstname": "smith",
+					"emplastname": "jhon",
+					"job": "HR",
+					"sal": 25000,
+					"phno": 123579
+				}
+
+			]]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
